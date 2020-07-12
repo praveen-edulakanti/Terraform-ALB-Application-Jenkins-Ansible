@@ -1,6 +1,6 @@
-module "backend" {
+/*module "backend" {
   source                     = "./modules/backend"
-}
+}*/
 
 provider "aws" {
   version = "~> 2.1"
