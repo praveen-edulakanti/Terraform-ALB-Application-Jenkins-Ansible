@@ -1,0 +1,14 @@
+---
+ - hosts: WebServer
+   become: true
+   tasks:
+           - name: Start Apache
+             service: name=apache2 state=restarted enabled=yes
+
+           - name: Clean /var/www/html folder
+             shell: /bin/rm -rf /var/www/html/*
+             
+           - git:
+               repo: 'https://github.com/praveen-edulakanti/user.git'
+               dest: /var/www/html/
+               force: yes
