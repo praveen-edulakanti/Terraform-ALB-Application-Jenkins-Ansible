@@ -67,7 +67,7 @@ module "route53" {
   DomainAliases    = var.DomainAliases
 }
 
-/*module "peerconnection" {
+module "peerconnection" {
   source           = "./modules/peerconnection"
   #owner_vpc_id     = ""
   acceptervpc_cidr  = var.vpc.cidr_block
@@ -77,4 +77,4 @@ module "route53" {
   environment          = var.environment
   project              = var.project
   peerconnection_name  = var.peerconnection_name
-}*/
+}
