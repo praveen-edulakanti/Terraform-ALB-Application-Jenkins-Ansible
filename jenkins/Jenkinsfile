@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Terraform Initialize'){
            steps {
-              sh 'terraform init'
+              sh 'terraform init -var-file="${Environment}.tfvars"'
            }
         }
         stage('Select Workspace'){ 
